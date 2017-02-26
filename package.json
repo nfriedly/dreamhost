@@ -1,0 +1,32 @@
+{
+  "name": "dreamhost",
+  "version": "1.0.0",
+  "description": "Complete DreamHost API client for Node.js and Browsers",
+  "main": "dreamhost.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfriedly/dreamhost.git"
+  },
+  "keywords": [
+    "dreamhost",
+    "api",
+    "client",
+    "domain",
+    "registration",
+    "hosting",
+    "vps",
+    "private",
+    "server",
+    "dns",
+    "email"
+  ],
+  "author": "Nathan Friedly (http://www.nfriedly.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nfriedly/dreamhost/issues"
+  },
+  "homepage": "https://github.com/nfriedly/dreamhost#readme"
+}
