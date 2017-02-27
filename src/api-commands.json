@@ -1,0 +1,634 @@
+{
+  "data": [
+    {
+      "cmd": "account-domain_usage",
+      "order": [
+        "domain",
+        "type",
+        "bw"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "account-list_accounts",
+      "order": [
+        "account_id",
+        "name",
+        "status",
+        "opened",
+        "yours"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "account-list_keys",
+      "order": [
+        "key_name",
+        "key_val"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "account-status",
+      "order": [
+        "key",
+        "value"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "account-user_usage",
+      "order": [
+        "user",
+        "disk",
+        "disk_as_of",
+        "bw"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "announcement_list-add_subscriber",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "announcement_list-list_lists",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "announcement_list-list_subscribers",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "announcement_list-post_announcement",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "announcement_list-remove_subscriber",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "api-list_accessible_cmds",
+      "order": [
+        "cmd",
+        "args",
+        "optargs",
+        "order"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "api-list_keys",
+      "order": [
+        "key",
+        "created",
+        "comment",
+        "functions"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "dns-add_record",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "dns-list_records",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "dns-remove_record",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "domain-list_certificates",
+      "order": [
+        "domain",
+        "type",
+        "signed",
+        "expires",
+        "on_order"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "domain-list_domains",
+      "order": [
+        "account_id",
+        "domain",
+        "home",
+        "type",
+        "unique_ip",
+        "hosting_type",
+        "user",
+        "path",
+        "outside_url",
+        "www_or_not",
+        "php",
+        "security",
+        "fastcgi",
+        "xcache",
+        "php_fcgid",
+        "passenger"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "domain-list_registrations",
+      "order": [
+        "account_id",
+        "domain",
+        "expires",
+        "created",
+        "modified",
+        "autorenew",
+        "locked",
+        "expired",
+        "ns1",
+        "ns2",
+        "ns3",
+        "ns4",
+        "registrant",
+        "registrant_org",
+        "registrant_street1",
+        "registrant_street2",
+        "registrant_city",
+        "registrant_state",
+        "registrant_zip",
+        "registrant_country",
+        "registrant_phone",
+        "registrant_fax",
+        "registrant_email",
+        "tech",
+        "tech_org",
+        "tech_street1",
+        "tech_street2",
+        "tech_city",
+        "tech_state",
+        "tech_zip",
+        "tech_country",
+        "tech_phone",
+        "tech_fax",
+        "tech_email",
+        "billing",
+        "billing_org",
+        "billing_street1",
+        "billing_street2",
+        "billing_city",
+        "billing_state",
+        "billing_zip",
+        "billing_country",
+        "billing_phone",
+        "billing_fax",
+        "billing_email",
+        "admin",
+        "admin_org",
+        "admin_street1",
+        "admin_street2",
+        "admin_city",
+        "admin_state",
+        "admin_zip",
+        "admin_country",
+        "admin_phone",
+        "admin_fax",
+        "admin_email"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "domain-registration_available",
+      "order": [
+        "available"
+      ],
+      "args": [
+        "domain"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "jabber-add_user",
+      "order": [
+        "token"
+      ],
+      "args": [
+        "username",
+        "domain",
+        "password"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "jabber-deactivate_user",
+      "order": [
+        "token"
+      ],
+      "args": [
+        "username",
+        "domain"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "jabber-list_users",
+      "order": [
+        "username",
+        "domain",
+        "password",
+        "status"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "jabber-list_users_no_pw",
+      "order": [
+        "username",
+        "domain",
+        "password"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "jabber-list_valid_domains",
+      "order": [
+        "domain"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "jabber-reactivate_user",
+      "order": [
+        "token"
+      ],
+      "args": [
+        "username",
+        "domain"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "jabber-remove_user",
+      "order": [
+        "token"
+      ],
+      "args": [
+        "username",
+        "domain"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "mail-add_filter",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mail-list_filters",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mail-remove_filter",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mysql-add_hostname",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mysql-add_user",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mysql-list_dbs",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mysql-list_hostnames",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mysql-list_users",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mysql-remove_hostname",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "mysql-remove_user",
+      "order": "see_docs",
+      "args": "see_docs",
+      "optargs": "see_docs"
+    },
+    {
+      "cmd": "oneclick-catalog",
+      "order": [
+        "app_id",
+        "name",
+        "version",
+        "developer",
+        "install_mode",
+        "rating",
+        "num_ratings"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "oneclick-describe_app",
+      "order": [
+        "app_id",
+        "name",
+        "version",
+        "latest_version",
+        "developer",
+        "excerpt",
+        "tags",
+        "install_mode",
+        "rating",
+        "num_ratings"
+      ],
+      "args": [
+        "app_id"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "oneclick-destroy_custom",
+      "order": [],
+      "args": [
+        "install_id",
+        "deletefiles"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "oneclick-install_custom",
+      "order": [
+        "token"
+      ],
+      "args": [
+        "app_id",
+        "url"
+      ],
+      "optargs": [
+        "database",
+        "repository"
+      ]
+    },
+    {
+      "cmd": "oneclick-list_custom",
+      "order": [
+        "app_id",
+        "install_id",
+        "url",
+        "last_updated",
+        "update_setting",
+        "update_available"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "oneclick-update",
+      "order": [
+        "token"
+      ],
+      "args": [
+        "install_id"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "oneclick-update_all",
+      "order": [
+        "install_id",
+        "token"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "rewards-add_promo_code",
+      "order": [],
+      "args": [
+        "code",
+        "description",
+        "bonus_domregs",
+        "bonus_ips",
+        "discount_month",
+        "discount_1year",
+        "discount_2year"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "rewards-disable_promo_code",
+      "order": [],
+      "args": [
+        "code"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "rewards-enable_promo_code",
+      "order": [],
+      "args": [
+        "code"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "rewards-list_promo_codes",
+      "order": [
+        "code",
+        "description",
+        "created",
+        "status",
+        "used"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "rewards-promo_details",
+      "order": [
+        "code",
+        "description",
+        "status",
+        "discount_month",
+        "discount_1year",
+        "discount_2year",
+        "bonus_domregs",
+        "bonus_ips"
+      ],
+      "args": [
+        "code"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "rewards-referral_log",
+      "order": [
+        "click_time",
+        "ip",
+        "code",
+        "signup_time",
+        "ref_url",
+        "webid",
+        "status"
+      ],
+      "args": [],
+      "optargs": [
+        "period"
+      ]
+    },
+    {
+      "cmd": "rewards-referral_summary",
+      "order": [
+        "code",
+        "signups",
+        "raw_clicks",
+        "unique_clicks",
+        "conversion"
+      ],
+      "args": [],
+      "optargs": [
+        "period"
+      ]
+    },
+    {
+      "cmd": "rewards-remove_promo_code",
+      "order": [],
+      "args": [
+        "code"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "services-flvencoder",
+      "order": [],
+      "args": [
+        "url"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "services-progress",
+      "order": [
+        "status",
+        "scheduled",
+        "executed",
+        "finished"
+      ],
+      "args": [
+        "token"
+      ],
+      "optargs": []
+    },
+    {
+      "cmd": "user-add_user",
+      "order": [
+        "username",
+        "password",
+        "token"
+      ],
+      "args": [
+        "type",
+        "username",
+        "gecos"
+      ],
+      "optargs": [
+        "server",
+        "shell_type",
+        "password",
+        "enhanced_security"
+      ]
+    },
+    {
+      "cmd": "user-list_users",
+      "order": [
+        "account_id",
+        "username",
+        "type",
+        "shell",
+        "home",
+        "disk_used_mb",
+        "quota_mb",
+        "gecos"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "user-list_users_no_pw",
+      "order": [
+        "account_id",
+        "username",
+        "type",
+        "shell",
+        "home",
+        "disk_used_mb",
+        "quota_mb",
+        "gecos"
+      ],
+      "args": [],
+      "optargs": []
+    },
+    {
+      "cmd": "user-remove_user",
+      "order": [],
+      "args": [
+        "username"
+      ],
+      "optargs": [
+        "type",
+        "remove_all"
+      ]
+    }
+  ],
+  "result": "success"
+}
