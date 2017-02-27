@@ -1,6 +1,5 @@
 'use strict';
 const { basename, extname } = require('path');
-const clone = require('clone');
 // this line is almost funny :)
 const pascalCase = require('pascal-case');
 const {getMethods} = require('../api-commands.js');
