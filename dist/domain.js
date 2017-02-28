@@ -1,6 +1,6 @@
 'use strict';
 
-const BaseDreamHostModule = require("./base.js");
+const BaseDreamHostModule = require('./base.js');
 
 /**
  * ModuleName module
@@ -13,43 +13,43 @@ const BaseDreamHostModule = require("./base.js");
 class Domain extends BaseDreamHostModule {
  /**
  * domain-list_certificates
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listCertificates(params) {
-  return this.request("domain-list_certificates", params);
+  return this.request('domain-list_certificates', params);
  }
 
  /**
  * domain-list_domains
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listDomains(params) {
-  return this.request("domain-list_domains", params);
+  return this.request('domain-list_domains', params);
  }
 
  /**
  * domain-list_registrations
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listRegistrations(params) {
-  return this.request("domain-list_registrations", params);
+  return this.request('domain-list_registrations', params);
  }
 
  /**
  * domain-registration_available
- * 
+ *
  * @param {Object} params
- * @param params.domain
- * @return {Promise<Object>}
+ * @param {String} params.domain
+ * @return {Promise}
  */
  registrationAvailable(params) {
-  return this.request("domain-registration_available", params);
+  return this.request('domain-registration_available', params);
  }
 }
 

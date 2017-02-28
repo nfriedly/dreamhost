@@ -1,6 +1,6 @@
 'use strict';
 
-const BaseDreamHostModule = require("./base.js");
+const BaseDreamHostModule = require('./base.js');
 
 /**
  * ModuleName module
@@ -13,38 +13,38 @@ const BaseDreamHostModule = require("./base.js");
 class Dns extends BaseDreamHostModule {
  /**
  * dns-add_record
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  addRecord(params) {
-  return this.request("dns-add_record", params);
+  return this.request('dns-add_record', params);
  }
 
  /**
  * dns-list_records
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listRecords(params) {
-  return this.request("dns-list_records", params);
+  return this.request('dns-list_records', params);
  }
 
  /**
  * dns-remove_record
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  removeRecord(params) {
-  return this.request("dns-remove_record", params);
+  return this.request('dns-remove_record', params);
  }
 }
 

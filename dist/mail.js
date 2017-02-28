@@ -1,6 +1,6 @@
 'use strict';
 
-const BaseDreamHostModule = require("./base.js");
+const BaseDreamHostModule = require('./base.js');
 
 /**
  * ModuleName module
@@ -13,38 +13,38 @@ const BaseDreamHostModule = require("./base.js");
 class Mail extends BaseDreamHostModule {
  /**
  * mail-add_filter
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  addFilter(params) {
-  return this.request("mail-add_filter", params);
+  return this.request('mail-add_filter', params);
  }
 
  /**
  * mail-list_filters
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listFilters(params) {
-  return this.request("mail-list_filters", params);
+  return this.request('mail-list_filters', params);
  }
 
  /**
  * mail-remove_filter
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  removeFilter(params) {
-  return this.request("mail-remove_filter", params);
+  return this.request('mail-remove_filter', params);
  }
 }
 

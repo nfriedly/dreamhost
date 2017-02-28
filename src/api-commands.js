@@ -19,4 +19,4 @@ apiCommands.forEach(command => {
 });
 
 exports.getModules = () => Object.keys(modules);
-exports.getMethods = (moduleName) => modules[moduleName];
+exports.getMethods = moduleName => modules[moduleName];

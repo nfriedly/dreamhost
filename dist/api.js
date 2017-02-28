@@ -1,6 +1,6 @@
 'use strict';
 
-const BaseDreamHostModule = require("./base.js");
+const BaseDreamHostModule = require('./base.js');
 
 /**
  * ModuleName module
@@ -13,22 +13,22 @@ const BaseDreamHostModule = require("./base.js");
 class Api extends BaseDreamHostModule {
  /**
  * api-list_accessible_cmds
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listAccessibleCmds(params) {
-  return this.request("api-list_accessible_cmds", params);
+  return this.request('api-list_accessible_cmds', params);
  }
 
  /**
  * api-list_keys
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listKeys(params) {
-  return this.request("api-list_keys", params);
+  return this.request('api-list_keys', params);
  }
 }
 

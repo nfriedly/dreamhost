@@ -1,10 +1,8 @@
 {
-  "//note": "name, private, and a few other fields get changed when publishing",
-  "name": "dreamhost-scaffolder",
+  "name": "dreamhost",
   "version": "1.0.0",
   "description": "Complete DreamHost API client for Node.js and Browsers",
   "main": "dreamhost.js",
-  "private": true,
   "scripts": {
     "test": "eslint . && jest",
     "autofix": "eslint . --fix",

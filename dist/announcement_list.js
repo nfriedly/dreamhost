@@ -1,6 +1,6 @@
 'use strict';
 
-const BaseDreamHostModule = require("./base.js");
+const BaseDreamHostModule = require('./base.js');
 
 /**
  * ModuleName module
@@ -13,62 +13,62 @@ const BaseDreamHostModule = require("./base.js");
 class AnnouncementList extends BaseDreamHostModule {
  /**
  * announcement_list-add_subscriber
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  addSubscriber(params) {
-  return this.request("announcement_list-add_subscriber", params);
+  return this.request('announcement_list-add_subscriber', params);
  }
 
  /**
  * announcement_list-list_lists
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listLists(params) {
-  return this.request("announcement_list-list_lists", params);
+  return this.request('announcement_list-list_lists', params);
  }
 
  /**
  * announcement_list-list_subscribers
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listSubscribers(params) {
-  return this.request("announcement_list-list_subscribers", params);
+  return this.request('announcement_list-list_subscribers', params);
  }
 
  /**
  * announcement_list-post_announcement
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  postAnnouncement(params) {
-  return this.request("announcement_list-post_announcement", params);
+  return this.request('announcement_list-post_announcement', params);
  }
 
  /**
  * announcement_list-remove_subscriber
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  removeSubscriber(params) {
-  return this.request("announcement_list-remove_subscriber", params);
+  return this.request('announcement_list-remove_subscriber', params);
  }
 }
 

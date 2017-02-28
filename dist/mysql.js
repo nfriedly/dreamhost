@@ -1,6 +1,6 @@
 'use strict';
 
-const BaseDreamHostModule = require("./base.js");
+const BaseDreamHostModule = require('./base.js');
 
 /**
  * ModuleName module
@@ -13,86 +13,86 @@ const BaseDreamHostModule = require("./base.js");
 class Mysql extends BaseDreamHostModule {
  /**
  * mysql-add_hostname
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  addHostname(params) {
-  return this.request("mysql-add_hostname", params);
+  return this.request('mysql-add_hostname', params);
  }
 
  /**
  * mysql-add_user
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  addUser(params) {
-  return this.request("mysql-add_user", params);
+  return this.request('mysql-add_user', params);
  }
 
  /**
  * mysql-list_dbs
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listDbs(params) {
-  return this.request("mysql-list_dbs", params);
+  return this.request('mysql-list_dbs', params);
  }
 
  /**
  * mysql-list_hostnames
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listHostnames(params) {
-  return this.request("mysql-list_hostnames", params);
+  return this.request('mysql-list_hostnames', params);
  }
 
  /**
  * mysql-list_users
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise<Array>}
  */
  listUsers(params) {
-  return this.request("mysql-list_users", params);
+  return this.request('mysql-list_users', params);
  }
 
  /**
  * mysql-remove_hostname
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  removeHostname(params) {
-  return this.request("mysql-remove_hostname", params);
+  return this.request('mysql-remove_hostname', params);
  }
 
  /**
  * mysql-remove_user
- * 
+ *
  * See DreamHost documentation for parameters.
- * 
+ *
  * @param {Object} params
- * @return {Promise<Object>}
+ * @return {Promise}
  */
  removeUser(params) {
-  return this.request("mysql-remove_user", params);
+  return this.request('mysql-remove_user', params);
  }
 }
 

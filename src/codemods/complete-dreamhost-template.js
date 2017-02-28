@@ -1,11 +1,16 @@
 'use strict';
-const { basename } = require('path');
+const {basename} = require('path');
 const pascalCase = require('pascal-case'); // lol
-const camelCase = require('camel-case');
+const camelCase = require('camelcase');
 const {getModules} = require('../api-commands.js');
 
-
-// takes each file in dist, determines the module from the filename, then renames the internal class and fills in the appropriate methods and docs
+/**
+ * takes each file in dist, determines the module from the filename,
+ * then renames the internal class and fills in the appropriate methods and docs
+ * @param {Object} file
+ * @param {Object} api
+ * @return {string|undefined}
+ */
 function transformer(file, api) {
   const j = api.jscodeshift;
 
@@ -25,18 +30,18 @@ function transformer(file, api) {
       p.value.declarations[0] &&
       p.value.declarations[0].init &&
       p.value.declarations[0].init.callee.name === 'require' &&
-      p.value.declarations[0].init.arguments &&
-      p.value.declarations[0].init.arguments[0] &&
-      p.value.declarations[0].init.arguments[0].value === "./base.js"
+      p.value.declarations[0].init['arguments'] &&
+      p.value.declarations[0].init['arguments'][0] &&
+      p.value.declarations[0].init['arguments'][0].value === './base.js'
     )
     .replaceWith(() => modules.map(moduleName =>
         j.variableDeclaration(
-          "const",
+          'const',
           [j.variableDeclarator(
             j.identifier(pascalCase(moduleName)),
             j.callExpression(
-              j.identifier("require"),
-              [j.literal(moduleName)]
+              j.identifier('require'),
+              [j.literal('./' + moduleName)]
             )
           )]
         )
@@ -55,14 +60,14 @@ function transformer(file, api) {
       block.body = modules.map(moduleName =>
         j.expressionStatement(
           j.assignmentExpression(
-            "=",
+            '=',
             j.memberExpression(
               j.thisExpression(),
               j.identifier(camelCase(moduleName))
             ),
             j.newExpression(
               j.identifier(pascalCase(moduleName)),
-              [j.identifier("options")]
+              [j.identifier('options')]
             )
           )
         )
@@ -70,7 +75,9 @@ function transformer(file, api) {
       return p.value;
     });
 
-  return ast.toSource();
+  // todo: re-export each module for convenience
+
+  return ast.toSource({quote: 'single'});
 }
 
 module.exports = transformer;

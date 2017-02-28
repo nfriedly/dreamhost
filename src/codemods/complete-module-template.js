@@ -1,5 +1,5 @@
 'use strict';
-const { basename, extname } = require('path');
+const {basename, extname} = require('path');
 // this line is almost funny :)
 const pascalCase = require('pascal-case');
 const {getMethods} = require('../api-commands.js');
@@ -10,15 +10,23 @@ const getParamsDoc = details => {
   doc.push('@param {Object} params');
   if (!seeDocs) {
     doc = doc
-    // todo: add types
-      .concat(details.args.map(a => `@param params.${a}`))
-      .concat(details.optargs.map(a => `@param [params.${a}]`))
+      .concat(details.args.map(a => `@param {String} params.${a}`))
+      .concat(details.optargs.map(a => `@param {String} [params.${a}]`));
   }
   return doc;
 };
 
+// todo: flesh this out a bit more
+// checks for -list to avoid false_positives like commands like announcement_list-remove_subscriber
+const getType = details => details.cmd.indexOf('-list') == -1 ? '' : '<Array>';
 
-// takes each file in dist, determines the module from the filename, then renames the internal class and fills in the appropriate methods and docs
+  /**
+ * takes each file in dist, determines the module from the filename,
+ * then renames the internal class and fills in the appropriate methods and docs
+ * @param {Object} file
+ * @param {Object} api
+ * @return {string|undefined}
+ */
 function transformer(file, api) {
   const j = api.jscodeshift;
 
@@ -50,40 +58,42 @@ function transformer(file, api) {
 
         // this is a rather obtuse way of building a one-line method...
         const node = j.methodDefinition(
-          "method",
+          'method',
           j.identifier(methodName),
           j.functionExpression(
             null,
-            [j.identifier("params")],
+            [j.identifier('params')],
             j.blockStatement([
               j.returnStatement(
                 j.callExpression(
                   j.memberExpression(
                     j.thisExpression(),
-                    j.identifier("request")
+                    j.identifier('request')
                   ), [
                     j.literal(details.cmd),
-                    j.identifier("params")
+                    j.identifier('params'),
                   ]
                 )
-              )
+              ),
             ])
           )
         );
 
         // build up a nice jsdoc block
+        const type = getType(details);
         node.comments = [j.commentBlock(
-          ['*', details.cmd, '']
+          '*' + [details.cmd, '']
             .concat(getParamsDoc(details))
-            .concat('@return {Promise<Object>}\n')
-            .join('\n* ')
+            .concat(`@return {Promise${type}}\n`)
+            .map(line => line ? '\n* ' + line : '\n*') // make the eslint no-trailing-space rule happy
+            .join('')
         )];
 
         return node;
       })
     ));
 
-  return ast.toSource();
+  return ast.toSource({quote: 'single'});
 }
 
 module.exports = transformer;
