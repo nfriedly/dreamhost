@@ -34,11 +34,11 @@ Or create an instance of an individual API module:
 ```js
 const DNS = require('dreamhost/dns');
 
-const dns = new DreamhostDNS({
+const dns = new DNS({
   key: '<your api key>'
 });
 
-dns.listRecords({type: 'A')
+dns.listRecords({type: 'A'})
   .then(records => console.log(records))
   .catch(err => console.error(err))
 ```
