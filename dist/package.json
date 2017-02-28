@@ -1,6 +1,6 @@
 {
   "name": "dreamhost",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Complete DreamHost API client for Node.js",
   "main": "dreamhost.js",
   "scripts": {
