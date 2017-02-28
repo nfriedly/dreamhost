@@ -75,7 +75,8 @@ const <% camelCase(moduleName) %> = new <%= pascalCase(moduleName) %>({key: '...
 #### <%= camelCase(moduleName) %>.<%= method %>(): Promise
 
 <%  if (seeDocs) {
-      %>See [DreamHost's documentation][API] for parameters and return details.<%
+      %>See [DreamHost's documentation][API] for parameters and return details.
+<%
     } else {
       %>Params:
 <%

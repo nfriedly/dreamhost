@@ -144,18 +144,23 @@ announcementList.method().then(/*...*/);
 #### announcementList.addSubscriber(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### announcementList.listLists(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### announcementList.listSubscribers(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### announcementList.postAnnouncement(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### announcementList.removeSubscriber(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 ### Api
 
 ```js
@@ -211,12 +216,15 @@ dns.method().then(/*...*/);
 #### dns.addRecord(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### dns.listRecords(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### dns.removeRecord(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 ### Domain
 
 ```js
@@ -437,12 +445,15 @@ mail.method().then(/*...*/);
 #### mail.addFilter(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### mail.listFilters(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### mail.removeFilter(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 ### Mysql
 
 ```js
@@ -461,24 +472,31 @@ mysql.method().then(/*...*/);
 #### mysql.addHostname(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### mysql.addUser(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### mysql.listDbs(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### mysql.listHostnames(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### mysql.listUsers(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### mysql.removeHostname(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 #### mysql.removeUser(): Promise
 
 See [DreamHost's documentation][API] for parameters and return details.
+
 ### Oneclick
 
 ```js
