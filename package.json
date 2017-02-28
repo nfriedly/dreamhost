@@ -1,7 +1,7 @@
 {
   "//note": "name, private, and a few other fields get changed when publishing",
   "name": "dreamhost-scaffolder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Complete DreamHost API client for Node.js",
   "main": "dreamhost.js",
   "private": true,
