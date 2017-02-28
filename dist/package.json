@@ -1,7 +1,7 @@
 {
   "name": "dreamhost",
   "version": "1.0.0",
-  "description": "Complete DreamHost API client for Node.js and Browsers",
+  "description": "Complete DreamHost API client for Node.js",
   "main": "dreamhost.js",
   "scripts": {
     "test": "eslint . && jest",

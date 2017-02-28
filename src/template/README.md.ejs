@@ -6,7 +6,7 @@ Ready for browser use if DreamHost ever enables CORS on their API.
 
 ## Prerequisites
 
-You'll need a [DreamHost] account and an [API Key][API], and [Node.js] >= v4.
+You'll need a [DreamHost] account and an [API Key][API], and [Node.js] >= v6.
 
 ## Installation
 
