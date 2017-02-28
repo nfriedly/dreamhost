@@ -15,13 +15,13 @@ class User extends BaseDreamHostModule {
  * user-add_user
  * 
  * @param {Object} params
- * @param type
- * @param username
- * @param gecos
- * @param [server]
- * @param [shell_type]
- * @param [password]
- * @param [enhanced_security]
+ * @param params.type
+ * @param params.username
+ * @param params.gecos
+ * @param [params.server]
+ * @param [params.shell_type]
+ * @param [params.password]
+ * @param [params.enhanced_security]
  * @return {Promise<Object>}
  */
  addUser(params) {
@@ -52,9 +52,9 @@ class User extends BaseDreamHostModule {
  * user-remove_user
  * 
  * @param {Object} params
- * @param username
- * @param [type]
- * @param [remove_all]
+ * @param params.username
+ * @param [params.type]
+ * @param [params.remove_all]
  * @return {Promise<Object>}
  */
  removeUser(params) {

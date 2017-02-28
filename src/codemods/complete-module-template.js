@@ -10,8 +10,9 @@ const getParamsDoc = details => {
   doc.push('@param {Object} params');
   if (!seeDocs) {
     doc = doc
-      .concat(details.args.map(a => `@param ${a}`))
-      .concat(details.optargs.map(a => `@param [${a}]`))
+    // todo: add types
+      .concat(details.args.map(a => `@param params.${a}`))
+      .concat(details.optargs.map(a => `@param [params.${a}]`))
   }
   return doc;
 };

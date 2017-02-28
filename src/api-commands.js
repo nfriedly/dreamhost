@@ -4,7 +4,7 @@
 
 const camelcase = require('camelcase');
 
-// generate this file by calling https://api.dreamhost.com/?key=<YOUR API KEY>&format=json&cmd=api-list_accessible_cmds
+// generate this file by calling https://api.dreamhost.com/?cmd=api-list_accessible_cmds&key=<YOUR API KEY>&format=json
 // the key must have access to all api commands in order to build a complete dist
 const apiCommands = require('./api-commands.json').data;
 

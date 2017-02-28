@@ -45,7 +45,7 @@ class Domain extends BaseDreamHostModule {
  * domain-registration_available
  * 
  * @param {Object} params
- * @param domain
+ * @param params.domain
  * @return {Promise<Object>}
  */
  registrationAvailable(params) {

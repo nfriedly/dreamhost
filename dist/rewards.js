@@ -15,13 +15,13 @@ class Rewards extends BaseDreamHostModule {
  * rewards-add_promo_code
  * 
  * @param {Object} params
- * @param code
- * @param description
- * @param bonus_domregs
- * @param bonus_ips
- * @param discount_month
- * @param discount_1year
- * @param discount_2year
+ * @param params.code
+ * @param params.description
+ * @param params.bonus_domregs
+ * @param params.bonus_ips
+ * @param params.discount_month
+ * @param params.discount_1year
+ * @param params.discount_2year
  * @return {Promise<Object>}
  */
  addPromoCode(params) {
@@ -32,7 +32,7 @@ class Rewards extends BaseDreamHostModule {
  * rewards-disable_promo_code
  * 
  * @param {Object} params
- * @param code
+ * @param params.code
  * @return {Promise<Object>}
  */
  disablePromoCode(params) {
@@ -43,7 +43,7 @@ class Rewards extends BaseDreamHostModule {
  * rewards-enable_promo_code
  * 
  * @param {Object} params
- * @param code
+ * @param params.code
  * @return {Promise<Object>}
  */
  enablePromoCode(params) {
@@ -64,7 +64,7 @@ class Rewards extends BaseDreamHostModule {
  * rewards-promo_details
  * 
  * @param {Object} params
- * @param code
+ * @param params.code
  * @return {Promise<Object>}
  */
  promoDetails(params) {
@@ -75,7 +75,7 @@ class Rewards extends BaseDreamHostModule {
  * rewards-referral_log
  * 
  * @param {Object} params
- * @param [period]
+ * @param [params.period]
  * @return {Promise<Object>}
  */
  referralLog(params) {
@@ -86,7 +86,7 @@ class Rewards extends BaseDreamHostModule {
  * rewards-referral_summary
  * 
  * @param {Object} params
- * @param [period]
+ * @param [params.period]
  * @return {Promise<Object>}
  */
  referralSummary(params) {
@@ -97,7 +97,7 @@ class Rewards extends BaseDreamHostModule {
  * rewards-remove_promo_code
  * 
  * @param {Object} params
- * @param code
+ * @param params.code
  * @return {Promise<Object>}
  */
  removePromoCode(params) {

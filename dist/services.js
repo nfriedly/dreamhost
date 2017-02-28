@@ -15,7 +15,7 @@ class Services extends BaseDreamHostModule {
  * services-flvencoder
  * 
  * @param {Object} params
- * @param url
+ * @param params.url
  * @return {Promise<Object>}
  */
  flvencoder(params) {
@@ -26,7 +26,7 @@ class Services extends BaseDreamHostModule {
  * services-progress
  * 
  * @param {Object} params
- * @param token
+ * @param params.token
  * @return {Promise<Object>}
  */
  progress(params) {

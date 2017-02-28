@@ -15,9 +15,9 @@ class Jabber extends BaseDreamHostModule {
  * jabber-add_user
  * 
  * @param {Object} params
- * @param username
- * @param domain
- * @param password
+ * @param params.username
+ * @param params.domain
+ * @param params.password
  * @return {Promise<Object>}
  */
  addUser(params) {
@@ -28,8 +28,8 @@ class Jabber extends BaseDreamHostModule {
  * jabber-deactivate_user
  * 
  * @param {Object} params
- * @param username
- * @param domain
+ * @param params.username
+ * @param params.domain
  * @return {Promise<Object>}
  */
  deactivateUser(params) {
@@ -70,8 +70,8 @@ class Jabber extends BaseDreamHostModule {
  * jabber-reactivate_user
  * 
  * @param {Object} params
- * @param username
- * @param domain
+ * @param params.username
+ * @param params.domain
  * @return {Promise<Object>}
  */
  reactivateUser(params) {
@@ -82,8 +82,8 @@ class Jabber extends BaseDreamHostModule {
  * jabber-remove_user
  * 
  * @param {Object} params
- * @param username
- * @param domain
+ * @param params.username
+ * @param params.domain
  * @return {Promise<Object>}
  */
  removeUser(params) {

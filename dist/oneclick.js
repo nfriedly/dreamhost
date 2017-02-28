@@ -25,7 +25,7 @@ class Oneclick extends BaseDreamHostModule {
  * oneclick-describe_app
  * 
  * @param {Object} params
- * @param app_id
+ * @param params.app_id
  * @return {Promise<Object>}
  */
  describeApp(params) {
@@ -36,8 +36,8 @@ class Oneclick extends BaseDreamHostModule {
  * oneclick-destroy_custom
  * 
  * @param {Object} params
- * @param install_id
- * @param deletefiles
+ * @param params.install_id
+ * @param params.deletefiles
  * @return {Promise<Object>}
  */
  destroyCustom(params) {
@@ -48,10 +48,10 @@ class Oneclick extends BaseDreamHostModule {
  * oneclick-install_custom
  * 
  * @param {Object} params
- * @param app_id
- * @param url
- * @param [database]
- * @param [repository]
+ * @param params.app_id
+ * @param params.url
+ * @param [params.database]
+ * @param [params.repository]
  * @return {Promise<Object>}
  */
  installCustom(params) {
@@ -72,7 +72,7 @@ class Oneclick extends BaseDreamHostModule {
  * oneclick-update
  * 
  * @param {Object} params
- * @param install_id
+ * @param params.install_id
  * @return {Promise<Object>}
  */
  update(params) {

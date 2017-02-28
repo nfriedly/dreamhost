@@ -20,11 +20,12 @@ rimraf(distDir)
     )
   ))
   .then(() => Promise.all([
-    copyToDist('base.js', 'base.js'),
-    copyToDist('dreamhost-template.js', 'dreamhost.js'),
-    ...api.getModules().map(m => copyToDist('module-template.js', m + '.js'))
+    copyToDist('../package.json', 'package.json'),
+    copyToDist('template/base.js', 'base.js'),
+    copyToDist('template/dreamhost.js', 'dreamhost.js'),
+    ...api.getModules().map(m => copyToDist('template/module.js', m + '.js'))
   ]))
-  .then(() => console.log('scaffolding coppied'))
+  .then(() => console.log('scaffolding copied'))
   .catch(ex => {
     console.log(ex);
     process.exit(1);
