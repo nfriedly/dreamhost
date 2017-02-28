@@ -24,7 +24,7 @@ const dreamHost = new DreamHost({
 });
 
 // dreamHost will be initialized with all modules available, e.g.
-dreamHost.dns.listRecords({type: 'A'})
+dreamHost.dns.listRecords()
   .then(records => console.log(records))
   .catch(err => console.error(err))
 ```
@@ -38,7 +38,7 @@ const dns = new DNS({
   key: '<your api key>'
 });
 
-dns.listRecords({type: 'A'})
+dns.listRecords()
   .then(records => console.log(records))
   .catch(err => console.error(err))
 ```
