@@ -16,7 +16,7 @@ class DreamhostAPIModule {
    * @constructor
    * @param {Object} options
    * @param {String} options.key - DreamHost API Key - get one at https://panel.dreamhost.com/?tree=home.api
-   * @param {String} [options.account] - The account number to perform operations under.
+   * @param {String} [options.account] - The account number to perform operations under
    * @param {String} [options.api_url=https://api.dreamhost.com/] - URL of Dreamhost API
    */
   constructor(options) {
@@ -62,23 +62,23 @@ class DreamhostAPIModule {
    * @return {Promise<*>}
    */
   handleResponse(response) {
-      return response.json().then(body => {
-        if (body.result === 'success') {
-          return body.data;
-        } else if (body.result === 'error') {
-          // an error might look like {"reason":"The API key you provided does not exist.","data":"invalid_api_key","result":"error"}⏎
-          // note: dreamhost puts a 200 status code even on errors
-          const err = new Error(`DreamHost API Error: ${body.reason || body.data}`);
-          err.code = body.data || 'unknown _error';
-          err.raw = body;
-          throw err;
-        } else {
-          const err = new Error('Unexpected response format from DreamHost API');
-          err.code = body.data || 'unknown _error';
-          err.raw = body;
-          throw err;
-        }
-      });
+    return response.json().then(body => {
+      if (body.result === 'success') {
+        return body.data;
+      } else if (body.result === 'error') {
+        // an error might look like {"reason":"The API key you provided does not exist.","data":"invalid_api_key","result":"error"}⏎
+        // note: dreamhost puts a 200 status code even on errors
+        const err = new Error(`DreamHost API Error: ${body.reason || body.data}`);
+        err.code = body.data || 'unknown _error';
+        err.raw = body;
+        throw err;
+      } else {
+        const err = new Error('Unexpected response format from DreamHost API');
+        err.code = body.data || 'unknown _error';
+        err.raw = body;
+        throw err;
+      }
+    });
   }
 }
 

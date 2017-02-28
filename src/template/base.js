@@ -48,7 +48,9 @@ class DreamhostAPIModule {
     params.cmd = cmd;
     params.key = this.key;
     params.format = 'json';
-    params.account = this.account;
+    if (this.account) {
+      params.account = this.account;
+    }
     return fetch(this.api_url + qs.stringify(params))
       .then(this.handleResponse);
   }

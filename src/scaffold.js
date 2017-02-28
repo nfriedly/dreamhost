@@ -1,6 +1,9 @@
 'use strict';
 const {resolve, join} = require('path');
 const fs = require('fs');
+const ejs = require('ejs');
+const pascalCase = require('pascal-case'); // lol
+const camelCase = require('camelcase');
 const rimraf = require('rimraf-promise');
 const api = require('./api-commands.js');
 
@@ -25,14 +28,17 @@ const createPackageJSON = () => new Promise((resolve, reject) => {
 });
 
 const createReadme = () => new Promise((resolve, reject) => {
-  fs.readFile(join(__dirname, 'template/README.md'), (err, body) => {
+  ejs.renderFile(join(__dirname, 'template/README.md.ejs'), {
+    api,
+    pascalCase,
+    camelCase,
+  }, {
+    cache: false, // no need
+  }, (err, str) => {
     if (err) {
       return reject(err);
     }
-    // todo: fill in api docs
-    const apidocs = '';
-    body = body.toString().replace('{apidoc}', apidocs);
-    fs.writeFile(join(distDir, 'README.md'), body, err =>
+    fs.writeFile(join(distDir, 'README.md'), str, err =>
       err ? reject(err) : resolve()
     );
   });
@@ -61,5 +67,8 @@ module.exports = {
 };
 
 if (require.main === module) {
-  scaffold();
+  scaffold().catch(ex => {
+    console.error(ex);
+    process.exit(1);
+  });
 }
