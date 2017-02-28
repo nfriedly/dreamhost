@@ -62,7 +62,7 @@ dreamHost.<%= camelCase(moduleName) %>.method().then(/*...*/);
 or
 ```js
 const <%= pascalCase(moduleName) %> = require('dreamhost/<%= moduleName %>');
-const <% camelCase(moduleName) %> = new <%= pascalCase(moduleName) %>({key: '...'});
+const <%= camelCase(moduleName) %> = new <%= pascalCase(moduleName) %>({key: '...'});
 <%= camelCase(moduleName) %>.method().then(/*...*/);
 ```
 

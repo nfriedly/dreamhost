@@ -70,7 +70,7 @@ dreamHost.account.method().then(/*...*/);
 or
 ```js
 const Account = require('dreamhost/account');
-const  = new Account({key: '...'});
+const account = new Account({key: '...'});
 account.method().then(/*...*/);
 ```
 
@@ -136,7 +136,7 @@ dreamHost.announcementList.method().then(/*...*/);
 or
 ```js
 const AnnouncementList = require('dreamhost/announcement_list');
-const  = new AnnouncementList({key: '...'});
+const announcementList = new AnnouncementList({key: '...'});
 announcementList.method().then(/*...*/);
 ```
 
@@ -171,7 +171,7 @@ dreamHost.api.method().then(/*...*/);
 or
 ```js
 const Api = require('dreamhost/api');
-const  = new Api({key: '...'});
+const api = new Api({key: '...'});
 api.method().then(/*...*/);
 ```
 
@@ -208,7 +208,7 @@ dreamHost.dns.method().then(/*...*/);
 or
 ```js
 const Dns = require('dreamhost/dns');
-const  = new Dns({key: '...'});
+const dns = new Dns({key: '...'});
 dns.method().then(/*...*/);
 ```
 
@@ -235,7 +235,7 @@ dreamHost.domain.method().then(/*...*/);
 or
 ```js
 const Domain = require('dreamhost/domain');
-const  = new Domain({key: '...'});
+const domain = new Domain({key: '...'});
 domain.method().then(/*...*/);
 ```
 
@@ -356,7 +356,7 @@ dreamHost.jabber.method().then(/*...*/);
 or
 ```js
 const Jabber = require('dreamhost/jabber');
-const  = new Jabber({key: '...'});
+const jabber = new Jabber({key: '...'});
 jabber.method().then(/*...*/);
 ```
 
@@ -437,7 +437,7 @@ dreamHost.mail.method().then(/*...*/);
 or
 ```js
 const Mail = require('dreamhost/mail');
-const  = new Mail({key: '...'});
+const mail = new Mail({key: '...'});
 mail.method().then(/*...*/);
 ```
 
@@ -464,7 +464,7 @@ dreamHost.mysql.method().then(/*...*/);
 or
 ```js
 const Mysql = require('dreamhost/mysql');
-const  = new Mysql({key: '...'});
+const mysql = new Mysql({key: '...'});
 mysql.method().then(/*...*/);
 ```
 
@@ -507,7 +507,7 @@ dreamHost.oneclick.method().then(/*...*/);
 or
 ```js
 const Oneclick = require('dreamhost/oneclick');
-const  = new Oneclick({key: '...'});
+const oneclick = new Oneclick({key: '...'});
 oneclick.method().then(/*...*/);
 ```
 
@@ -600,7 +600,7 @@ dreamHost.rewards.method().then(/*...*/);
 or
 ```js
 const Rewards = require('dreamhost/rewards');
-const  = new Rewards({key: '...'});
+const rewards = new Rewards({key: '...'});
 rewards.method().then(/*...*/);
 ```
 
@@ -694,7 +694,7 @@ dreamHost.services.method().then(/*...*/);
 or
 ```js
 const Services = require('dreamhost/services');
-const  = new Services({key: '...'});
+const services = new Services({key: '...'});
 services.method().then(/*...*/);
 ```
 
@@ -725,7 +725,7 @@ dreamHost.user.method().then(/*...*/);
 or
 ```js
 const User = require('dreamhost/user');
-const  = new User({key: '...'});
+const user = new User({key: '...'});
 user.method().then(/*...*/);
 ```
 
