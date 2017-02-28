@@ -5,7 +5,7 @@
   "main": "src/dreamhost.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node src/scaffold.js && jscodeshift --transform src/codemods/*.js dist/*.js"
+    "build": "node src/scaffold.js && for codemod in src/codemods/*.js; do echo \"applying $codemod\"; jscodeshift --transform $codemod dist/*.js; done"
   },
   "repository": {
     "type": "git",
