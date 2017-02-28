@@ -19,12 +19,12 @@ Create a complete instance
 ```js
 const DreamHost = require('dreamhost');
 
-const dreamHost = new Dreamhost({
+const dreamHost = new DreamHost({
   key: '<your api key>'
 });
 
 // dreamHost will be initialized with all modules available, e.g.
-dreamHost.dns.listRecords({type: 'A')
+dreamHost.dns.listRecords({type: 'A'})
   .then(records => console.log(records))
   .catch(err => console.error(err))
 ```
@@ -47,6 +47,18 @@ dns.listRecords({type: 'A')
 
 All methods return a promise that resolves to the `data` field from the DreamHost API response.
 
+* [Account](#account)
+* [AnnouncementList](#announcement_list)
+* [Api](#api)
+* [Dns](#dns)
+* [Domain](#domain)
+* [Jabber](#jabber)
+* [Mail](#mail)
+* [Mysql](#mysql)
+* [Oneclick](#oneclick)
+* [Rewards](#rewards)
+* [Services](#services)
+* [User](#user)
 
 ### Account
 
