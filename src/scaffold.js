@@ -22,6 +22,7 @@ const createPackageJSON = () => new Promise((resolve, reject) => {
   delete pkg.private;
   delete pkg['//note'];
   pkg.name = 'dreamhost';
+  pkg.engines.node = '>=4';
   fs.writeFile(join(distDir, 'package.json'), JSON.stringify(pkg, null, 2), err =>
     err ? reject(err) : resolve()
   );

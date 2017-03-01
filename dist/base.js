@@ -44,7 +44,8 @@ class DreamhostAPIModule {
    * @param {Object} [params]
    * @return {Promise<Object>}
    */
-  request(cmd, params={}) {
+  request(cmd, params) {
+    params = params || {};
     params.cmd = cmd;
     params.key = this.key;
     params.format = 'json';

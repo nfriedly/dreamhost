@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/nfriedly/dreamhost#readme",
   "engines": {
-    "node": ">=6"
+    "node": ">=4"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1"
