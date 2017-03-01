@@ -16,7 +16,7 @@ class Dns extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  addRecord(params) {
@@ -28,7 +28,7 @@ class Dns extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise<Array>}
  */
  listRecords(params) {
@@ -40,7 +40,7 @@ class Dns extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  removeRecord(params) {

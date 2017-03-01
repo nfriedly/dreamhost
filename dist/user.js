@@ -31,21 +31,19 @@ class User extends BaseDreamHostModule {
  /**
  * user-list_users
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listUsers(params) {
-  return this.request('user-list_users', params);
+ listUsers() {
+  return this.request('user-list_users');
  }
 
  /**
  * user-list_users_no_pw
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listUsersNoPw(params) {
-  return this.request('user-list_users_no_pw', params);
+ listUsersNoPw() {
+  return this.request('user-list_users_no_pw');
  }
 
  /**

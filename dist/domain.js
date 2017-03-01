@@ -14,31 +14,28 @@ class Domain extends BaseDreamHostModule {
  /**
  * domain-list_certificates
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listCertificates(params) {
-  return this.request('domain-list_certificates', params);
+ listCertificates() {
+  return this.request('domain-list_certificates');
  }
 
  /**
  * domain-list_domains
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listDomains(params) {
-  return this.request('domain-list_domains', params);
+ listDomains() {
+  return this.request('domain-list_domains');
  }
 
  /**
  * domain-list_registrations
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listRegistrations(params) {
-  return this.request('domain-list_registrations', params);
+ listRegistrations() {
+  return this.request('domain-list_registrations');
  }
 
  /**

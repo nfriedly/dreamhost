@@ -53,11 +53,10 @@ class Rewards extends BaseDreamHostModule {
  /**
  * rewards-list_promo_codes
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listPromoCodes(params) {
-  return this.request('rewards-list_promo_codes', params);
+ listPromoCodes() {
+  return this.request('rewards-list_promo_codes');
  }
 
  /**

@@ -14,51 +14,46 @@ class Account extends BaseDreamHostModule {
  /**
  * account-domain_usage
  *
- * @param {Object} params
  * @return {Promise}
  */
- domainUsage(params) {
-  return this.request('account-domain_usage', params);
+ domainUsage() {
+  return this.request('account-domain_usage');
  }
 
  /**
  * account-list_accounts
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listAccounts(params) {
-  return this.request('account-list_accounts', params);
+ listAccounts() {
+  return this.request('account-list_accounts');
  }
 
  /**
  * account-list_keys
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listKeys(params) {
-  return this.request('account-list_keys', params);
+ listKeys() {
+  return this.request('account-list_keys');
  }
 
  /**
  * account-status
  *
- * @param {Object} params
  * @return {Promise}
  */
- status(params) {
-  return this.request('account-status', params);
+ status() {
+  return this.request('account-status');
  }
 
  /**
  * account-user_usage
  *
- * @param {Object} params
  * @return {Promise}
  */
- userUsage(params) {
-  return this.request('account-user_usage', params);
+ userUsage() {
+  return this.request('account-user_usage');
  }
 }
 

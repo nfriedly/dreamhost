@@ -39,31 +39,28 @@ class Jabber extends BaseDreamHostModule {
  /**
  * jabber-list_users
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listUsers(params) {
-  return this.request('jabber-list_users', params);
+ listUsers() {
+  return this.request('jabber-list_users');
  }
 
  /**
  * jabber-list_users_no_pw
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listUsersNoPw(params) {
-  return this.request('jabber-list_users_no_pw', params);
+ listUsersNoPw() {
+  return this.request('jabber-list_users_no_pw');
  }
 
  /**
  * jabber-list_valid_domains
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listValidDomains(params) {
-  return this.request('jabber-list_valid_domains', params);
+ listValidDomains() {
+  return this.request('jabber-list_valid_domains');
  }
 
  /**

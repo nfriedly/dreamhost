@@ -14,21 +14,19 @@ class Api extends BaseDreamHostModule {
  /**
  * api-list_accessible_cmds
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listAccessibleCmds(params) {
-  return this.request('api-list_accessible_cmds', params);
+ listAccessibleCmds() {
+  return this.request('api-list_accessible_cmds');
  }
 
  /**
  * api-list_keys
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listKeys(params) {
-  return this.request('api-list_keys', params);
+ listKeys() {
+  return this.request('api-list_keys');
  }
 }
 

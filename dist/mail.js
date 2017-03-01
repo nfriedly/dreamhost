@@ -16,7 +16,7 @@ class Mail extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  addFilter(params) {
@@ -28,7 +28,7 @@ class Mail extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise<Array>}
  */
  listFilters(params) {
@@ -40,7 +40,7 @@ class Mail extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  removeFilter(params) {

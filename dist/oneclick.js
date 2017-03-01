@@ -14,11 +14,10 @@ class Oneclick extends BaseDreamHostModule {
  /**
  * oneclick-catalog
  *
- * @param {Object} params
  * @return {Promise}
  */
- catalog(params) {
-  return this.request('oneclick-catalog', params);
+ catalog() {
+  return this.request('oneclick-catalog');
  }
 
  /**
@@ -61,11 +60,10 @@ class Oneclick extends BaseDreamHostModule {
  /**
  * oneclick-list_custom
  *
- * @param {Object} params
  * @return {Promise<Array>}
  */
- listCustom(params) {
-  return this.request('oneclick-list_custom', params);
+ listCustom() {
+  return this.request('oneclick-list_custom');
  }
 
  /**
@@ -82,11 +80,10 @@ class Oneclick extends BaseDreamHostModule {
  /**
  * oneclick-update_all
  *
- * @param {Object} params
  * @return {Promise}
  */
- updateAll(params) {
-  return this.request('oneclick-update_all', params);
+ updateAll() {
+  return this.request('oneclick-update_all');
  }
 }
 

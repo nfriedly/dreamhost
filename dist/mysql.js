@@ -16,7 +16,7 @@ class Mysql extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  addHostname(params) {
@@ -28,7 +28,7 @@ class Mysql extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  addUser(params) {
@@ -40,7 +40,7 @@ class Mysql extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise<Array>}
  */
  listDbs(params) {
@@ -52,7 +52,7 @@ class Mysql extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise<Array>}
  */
  listHostnames(params) {
@@ -64,7 +64,7 @@ class Mysql extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise<Array>}
  */
  listUsers(params) {
@@ -76,7 +76,7 @@ class Mysql extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  removeHostname(params) {
@@ -88,7 +88,7 @@ class Mysql extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  removeUser(params) {

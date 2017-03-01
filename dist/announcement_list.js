@@ -16,7 +16,7 @@ class AnnouncementList extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  addSubscriber(params) {
@@ -28,7 +28,7 @@ class AnnouncementList extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise<Array>}
  */
  listLists(params) {
@@ -40,7 +40,7 @@ class AnnouncementList extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise<Array>}
  */
  listSubscribers(params) {
@@ -52,7 +52,7 @@ class AnnouncementList extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  postAnnouncement(params) {
@@ -64,7 +64,7 @@ class AnnouncementList extends BaseDreamHostModule {
  *
  * See DreamHost documentation for parameters.
  *
- * @param {Object} params
+ * @param {Object} [params]
  * @return {Promise}
  */
  removeSubscriber(params) {

@@ -7,12 +7,19 @@ const {getMethods} = require('../api-commands.js');
 const getParamsDoc = details => {
   const seeDocs = details.args === 'see_docs';
   let doc = seeDocs ? ['See DreamHost documentation for parameters.', ''] : [];
-  doc.push('@param {Object} params');
-  if (!seeDocs) {
+  if (seeDocs ) {
+    doc.push('@param {Object} [params]');
+  } else {
+    if (details.args.length) {
+      doc.push('@param {Object} params');
+    } else if(details.optargs.length) {
+      doc.push('@param {Object} params');
+    }
     doc = doc
       .concat(details.args.map(a => `@param {String} params.${a}`))
       .concat(details.optargs.map(a => `@param {String} [params.${a}]`));
   }
+
   return doc;
 };
 
@@ -56,13 +63,16 @@ function transformer(file, api) {
       methodNames.map(methodName => {
         const details = apiCommands[methodName];
 
+        // only give it a params argument if it might use it
+        const acceptsParams = details.args === 'see_docs' || details.args.length || details.optargs.length;
+
         // this is a rather obtuse way of building a one-line method...
         const node = j.methodDefinition(
           'method',
           j.identifier(methodName),
           j.functionExpression(
             null,
-            [j.identifier('params')],
+            acceptsParams ? [j.identifier('params')] : [],
             j.blockStatement([
               j.returnStatement(
                 j.callExpression(
@@ -71,8 +81,9 @@ function transformer(file, api) {
                     j.identifier('request')
                   ), [
                     j.literal(details.cmd),
-                    j.identifier('params'),
-                  ]
+                  ].concat(
+                    acceptsParams ? j.identifier('params') : []
+                  )
                 )
               ),
             ])
