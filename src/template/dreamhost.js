@@ -10,7 +10,6 @@ const Module = require('./base.js');
  * https://help.dreamhost.com/hc/en-us/sections/203903178-API-Application-Programming-Interface-
  */
 class Dreamhost {
-
   /**
    * @param {Object} options
    * @constructor

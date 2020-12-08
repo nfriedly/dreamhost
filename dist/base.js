@@ -11,7 +11,6 @@ const qs = require('querystring');
  * @private
  */
 class DreamhostAPIModule {
-
   /**
    * @constructor
    * @param {Object} options
@@ -53,7 +52,7 @@ class DreamhostAPIModule {
       params.account = this.account;
     }
     return fetch(this.api_url + qs.stringify(params))
-      .then(this.handleResponse);
+        .then(this.handleResponse);
   }
 
   /**

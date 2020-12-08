@@ -13,14 +13,14 @@ test('can create a new Dreamhost() instance', () => {
 test('throws when missing a key', () => assert.throws(() => new DreamHost()));
 
 test('correctly formats errors from dreamhost', () => new Promise(resolve => {
-    new DreamHost({key: 'foo'}).dns.listRecords()
+  new DreamHost({key: 'foo'}).dns.listRecords()
       .then(records => assert.fail(records))
       .catch(er => {
         assert(er instanceof Error, 'error is an error instance');
         assert(er.code, 'err.code is set');
         resolve();
       });
-  })
+}),
 );
 
 

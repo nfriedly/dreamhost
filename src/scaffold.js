@@ -11,10 +11,10 @@ const distDir = resolve(__dirname, '../dist/');
 
 const copyToDist = (src, dest) => new Promise((resolve, reject) => {
   fs.createReadStream(join(__dirname, src))
-    .on('error', reject)
-    .pipe(fs.createWriteStream(join(distDir, dest)))
-    .on('error', reject)
-    .on('close', resolve);
+      .on('error', reject)
+      .pipe(fs.createWriteStream(join(distDir, dest)))
+      .on('error', reject)
+      .on('close', resolve);
 });
 
 const createPackageJSON = () => new Promise((resolve, reject) => {
@@ -24,7 +24,7 @@ const createPackageJSON = () => new Promise((resolve, reject) => {
   pkg.name = 'dreamhost';
   pkg.engines.node = '>=4';
   fs.writeFile(join(distDir, 'package.json'), JSON.stringify(pkg, null, 2), err =>
-    err ? reject(err) : resolve()
+    err ? reject(err) : resolve(),
   );
 });
 
@@ -40,26 +40,26 @@ const createReadme = () => new Promise((resolve, reject) => {
       return reject(err);
     }
     fs.writeFile(join(distDir, 'README.md'), str, err =>
-      err ? reject(err) : resolve()
+      err ? reject(err) : resolve(),
     );
   });
 });
 
 const scaffold = () =>
   rimraf(distDir)
-    .then(() => new Promise((resolve, reject) =>
-      fs.mkdir(distDir, err =>
-        err && reject(err) || resolve()
-      )
-    ))
-    .then(() => Promise.all([
-      createReadme(),
-      copyToDist('template/base.js', 'base.js'),
-      copyToDist('template/dreamhost.js', 'dreamhost.js'),
-      createPackageJSON(),
-      ...api.getModules().map(m => copyToDist('template/module.js', m + '.js')),
-    ]))
-    .then(() => console.log('scaffolding copied'));
+      .then(() => new Promise((resolve, reject) =>
+        fs.mkdir(distDir, err =>
+          err && reject(err) || resolve(),
+        ),
+      ))
+      .then(() => Promise.all([
+        createReadme(),
+        copyToDist('template/base.js', 'base.js'),
+        copyToDist('template/dreamhost.js', 'dreamhost.js'),
+        createPackageJSON(),
+        ...api.getModules().map(m => copyToDist('template/module.js', m + '.js')),
+      ]))
+      .then(() => console.log('scaffolding copied'));
 
 module.exports = {
   copyToDist,

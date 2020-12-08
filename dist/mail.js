@@ -11,7 +11,7 @@ const BaseDreamHostModule = require('./base.js');
  * @param {String} [options.api=https://api.dreamhost.com/] DreamHost API URL
  */
 class Mail extends BaseDreamHostModule {
- /**
+  /**
  * mail-add_filter
  *
  * See DreamHost documentation for parameters.
@@ -19,11 +19,11 @@ class Mail extends BaseDreamHostModule {
  * @param {Object} [params]
  * @return {Promise}
  */
- addFilter(params) {
-  return this.request('mail-add_filter', params);
- }
+  addFilter(params) {
+    return this.request('mail-add_filter', params);
+  }
 
- /**
+  /**
  * mail-list_filters
  *
  * See DreamHost documentation for parameters.
@@ -31,11 +31,11 @@ class Mail extends BaseDreamHostModule {
  * @param {Object} [params]
  * @return {Promise<Array>}
  */
- listFilters(params) {
-  return this.request('mail-list_filters', params);
- }
+  listFilters(params) {
+    return this.request('mail-list_filters', params);
+  }
 
- /**
+  /**
  * mail-remove_filter
  *
  * See DreamHost documentation for parameters.
@@ -43,9 +43,9 @@ class Mail extends BaseDreamHostModule {
  * @param {Object} [params]
  * @return {Promise}
  */
- removeFilter(params) {
-  return this.request('mail-remove_filter', params);
- }
+  removeFilter(params) {
+    return this.request('mail-remove_filter', params);
+  }
 }
 
 module.exports = Mail;

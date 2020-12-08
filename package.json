@@ -34,20 +34,20 @@
   },
   "homepage": "https://github.com/nfriedly/dreamhost#readme",
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "camelcase": "^4.0.0",
-    "ejs": "^2.5.6",
-    "eslint": ">=4.18.2",
-    "eslint-config-google": "^0.7.1",
-    "eslint-plugin-node": "^4.1.0",
-    "jest": "^19.0.2",
-    "jscodeshift": "^0.3.30",
-    "pascal-case": "^2.0.0",
+    "camelcase": "^6.2.0",
+    "ejs": "^3.1.5",
+    "eslint": ">=7.15.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^26.6.3",
+    "jscodeshift": "^0.11.0",
+    "pascal-case": "^3.1.2",
     "rimraf-promise": "^2.0.0"
   }
 }

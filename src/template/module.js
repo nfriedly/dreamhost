@@ -11,7 +11,6 @@ const BaseDreamHostModule = require('./base.js');
  * @param {String} [options.api=https://api.dreamhost.com/] DreamHost API URL
  */
 class ModuleName extends BaseDreamHostModule {
-
   // note: this method isn't actually used by the complete-template.js codemod,
   // but it is representative of the output
   /**

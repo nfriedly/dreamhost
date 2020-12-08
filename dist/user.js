@@ -11,7 +11,7 @@ const BaseDreamHostModule = require('./base.js');
  * @param {String} [options.api=https://api.dreamhost.com/] DreamHost API URL
  */
 class User extends BaseDreamHostModule {
- /**
+  /**
  * user-add_user
  *
  * @param {Object} params
@@ -24,29 +24,29 @@ class User extends BaseDreamHostModule {
  * @param {String} [params.enhanced_security]
  * @return {Promise}
  */
- addUser(params) {
-  return this.request('user-add_user', params);
- }
+  addUser(params) {
+    return this.request('user-add_user', params);
+  }
 
- /**
+  /**
  * user-list_users
  *
  * @return {Promise<Array>}
  */
- listUsers() {
-  return this.request('user-list_users');
- }
+  listUsers() {
+    return this.request('user-list_users');
+  }
 
- /**
+  /**
  * user-list_users_no_pw
  *
  * @return {Promise<Array>}
  */
- listUsersNoPw() {
-  return this.request('user-list_users_no_pw');
- }
+  listUsersNoPw() {
+    return this.request('user-list_users_no_pw');
+  }
 
- /**
+  /**
  * user-remove_user
  *
  * @param {Object} params
@@ -55,9 +55,9 @@ class User extends BaseDreamHostModule {
  * @param {String} [params.remove_all]
  * @return {Promise}
  */
- removeUser(params) {
-  return this.request('user-remove_user', params);
- }
+  removeUser(params) {
+    return this.request('user-remove_user', params);
+  }
 }
 
 module.exports = User;
