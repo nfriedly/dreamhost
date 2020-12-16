@@ -1,6 +1,6 @@
 'use strict';
 const {basename} = require('path');
-const pascalCase = require('pascal-case'); // lol
+const {pascalCase} = require('pascal-case'); // lol
 const camelCase = require('camelcase');
 const {getModules} = require('../api-commands.js');
 

@@ -2,7 +2,7 @@
 const {resolve, join} = require('path');
 const fs = require('fs');
 const ejs = require('ejs');
-const pascalCase = require('pascal-case'); // lol
+const {pascalCase} = require('pascal-case'); // lol
 const camelCase = require('camelcase');
 const rimraf = require('rimraf-promise');
 const api = require('./api-commands.js');

@@ -1,7 +1,7 @@
 'use strict';
 const {basename, extname} = require('path');
 // this line is almost funny :)
-const pascalCase = require('pascal-case');
+const {pascalCase} = require('pascal-case');
 const {getMethods} = require('../api-commands.js');
 
 const getParamsDoc = details => {
