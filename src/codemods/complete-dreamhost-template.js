@@ -76,8 +76,8 @@ function transformer(file, api) {
       });
 
   // todo: re-export each module for convenience
-
-  return ast.toSource({quote: 'single'});
+  // jscodemod is usually pretty good about figuring out tab width, but it seems to get it wrong for the constructor's body now
+  return ast.toSource({quote: 'single', tabWidth: 2});
 }
 
 module.exports = transformer;
